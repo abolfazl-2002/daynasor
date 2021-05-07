@@ -1,0 +1,90 @@
+/* universal */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* game */
+.game_wrapper {
+    height: 500px;
+    border-bottom: 2px solid #8a8a8a;
+    width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.game_wrapper+div { 
+    height: 20px;
+    width: 800px;
+    margin: auto;
+    background: url("../images/floor.jpg");
+}
+
+.dynasor {
+    display: inline-block;
+    position: absolute;
+    bottom: -11px;
+    left: 20px;
+}
+
+.dynasor img {
+    width: 50px;
+}
+
+.kaktus {
+    display: inline-block;
+    position: absolute;
+    bottom: -15px;
+    animation-name: kaktus;
+    animation-duration: 2.5s;
+    right: -10px;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.kaktus img {
+    width: 30px;
+}
+
+/* animations */
+@keyframes kaktus {
+    from {
+        left: 800px;
+    }
+    
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes dynasor {
+    0% {
+        bottom: -11px;
+        left: 20px;
+    }
+    
+    50% {
+        bottom: 100px;
+        left: 35px;
+    }
+    
+    60% {
+        bottom: 100px;
+        left: 35px;
+    }
+    
+    100% {
+        bottom: -11px;
+        left: 20px;
+    }
+}
+
+/* js classes */
+.jump {
+    animation-name: dynasor;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+}
